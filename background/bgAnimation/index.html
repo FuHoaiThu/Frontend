@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/3f4dc6f991.js"></script>
+    <link rel="stylesheet" href="./styles.css">
+    <title>Background Animation</title>
+</head>
+
+<body>
+    <!--background animation-->
+    <div class="bg-anime">
+        <button class="bg-anime__button">Background</button>
+    </div>
+    <!--js-->
+    <script src="./js/anime.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+        let numberOfBlock = 120;
+        var bg = document.querySelector('.bg-anime'); // chua elemt bg-anime
+        for(let i=0; i<numberOfBlock; i++) {
+            const blocks = document.createElement('div');
+            $(blocks).addClass('block'); // tao cac element con ten block item
+            bg.appendChild(blocks);
+        }
+        $('.bg-anime__button').click(function () { 
+            //console.log(1);
+            anime({
+                targets: '.block',
+                translateX: function() {
+                    return anime.random(-800, 800);
+                },
+                translateY: function() {
+                    return anime.random(-800, 800);
+                },
+                scale: function() {
+                    return anime.random(1, 5);
+                },
+                easing: 'easeInOutQuad'
+            });
+        })
+    </script>
+
+</body>
+
+</html>
