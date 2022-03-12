@@ -1,0 +1,79 @@
+header {
+    @extend %box;
+    position: fixed;
+    padding: 20px 0;
+    background-color: $white;
+    z-index: 100;
+
+    .logo a {
+        @include text-medium($text-color-black);
+        font-size: 1.4rem;
+    }
+
+    .menu-icon {
+        @include pos-ab-top-right(50%, 20px);
+        display: inline-block;
+        cursor: pointer;
+        z-index: 1;
+
+        .menu-icon__bar {
+            width: 30px;
+            height: 5px;
+            background-color: $black;
+            margin: 5px 0;
+        }
+    }
+}
+
+.change-menu {
+    .bar--2 {
+        opacity: 0;
+    }
+
+    .bar--1 {
+        @include rotate(-45deg, -9px, 6px);
+        @include transition-duration(.5s);
+    }
+
+    .bar--3 {
+        @include rotate(45deg, -8px, -6px);
+        @include transition-duration(.5s);
+    }
+}
+
+//menu
+.menu {
+    @extend %box;
+    @include transition(.7s);
+    height: 100vh;
+    background-color: $white;
+    top: -100%;
+    right: -100%;
+    position: fixed;
+    background-color: $grey;
+
+    .menu-list {
+        @include pos-ab-top-left(50%, 50%);
+
+        .menu-list__item {
+            font-family: $font-medium;
+            font-size: 1.2rem;
+            padding: 5px 0;
+            text-align: center;
+
+            a {
+                color: $text-color-black;
+                text-decoration: none;
+
+                &:hover {
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+.open-menu {
+    right: 0;
+    top: 0;
+}

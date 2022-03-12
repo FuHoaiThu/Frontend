@@ -1,0 +1,36 @@
+.contact {
+    @extend %box;
+}
+
+.form {
+    max-width: 700px;
+    margin: 0 auto;
+
+    .form-input,
+    .form-textarea {
+        width: 100%;
+        outline: none;
+        padding: 7.5px;
+        border: 1px solid $text-color-black;
+        border-radius: 5px;
+        color: $text-color-black;
+        font-size: .9rem;
+    }
+
+    .form-textarea {
+        resize: none;
+        height: 150px;
+    }
+
+    ::placeholder {
+        font-size: .9rem;
+        color: $text-color-black;
+        font-family: $font-medium;
+    }
+
+    :-ms-input-placeholder {
+        font-size: .9rem;
+        color: $text-color-black;
+        font-family: $font-medium;
+    }
+}

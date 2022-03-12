@@ -1,0 +1,56 @@
+//transition
+@mixin transition($time) {
+    transition: all $time ease-out;
+    -moz-transition: all $time ease-out;
+    -webkit-transition: all $time ease-out;
+    -o-transition: all $time ease-out;
+}
+
+@mixin text-medium($color) {
+    color: $color;
+    text-decoration: none;
+    font-family: $font-medium;
+    letter-spacing: 1px;
+}
+
+@mixin translate($x, $y) {
+    transform: translate($x, $y);
+    -webkit-transform: translate($x, $y);
+    -o-transform: translate($x, $y);
+    -moz-transform: translate($x, $y);
+    -ms-transform: translate($x, $y);
+}
+
+@mixin rotate($deg, $x, $y) {
+    transform: rotate($deg) translate($x, $y);
+    -webkit-transform: rotate($deg) translate($x, $y);
+    -o-transform: rotate($deg) translate($x, $y);
+    -ms-transform: rotate($deg) translate($x, $y);
+}
+
+@mixin transition-duration($time) {
+    transition-duration: $time;
+    -o-transition-duration: $time;
+    -webkit-transition-duration: $time;
+}
+
+@mixin pos-ab-bottom-left($bottom, $left) {
+    @include translate(-$left, -$bottom);
+    position: absolute;
+    bottom: $bottom;
+    left: $left;
+}
+
+@mixin pos-ab-top-right($top, $right) {
+    @include translate(-$right, -$top);
+    position: absolute;
+    top: $top;
+    right: $right;
+}
+
+@mixin pos-ab-top-left($top, $left) {
+    @include translate(-$left, -$top);
+    position: absolute;
+    top: $top;
+    left: $left;
+}

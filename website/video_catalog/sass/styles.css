@@ -1,0 +1,96 @@
+@font-face {
+  font-family: "Poppins-Light";
+  src: url("../Poppins/Poppins-Light.eot");
+  src: url("../Poppins/Poppins-Light.eot?#iefix") format("embedded-opentype"), url("../Poppins/Poppins-Light.woff") format("woff"), url("../Poppins/Poppins-Light.ttf") format("truetype"), url("../Poppins/Poppins-Light.svg#Poppins-Light") format("svg");
+}
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url("../Poppins/Poppins-Regular.eot");
+  src: url("../Poppins/Poppins-Regular.eot?#iefix") format("embedded-opentype"), url("../Poppins/Poppins-Regular.woff") format("woff"), url("../Poppins/Poppins-Regular.ttf") format("truetype"), url("../Poppins/Poppins-Regular.svg#Poppins-Regular") format("svg");
+}
+@font-face {
+  font-family: "Poppins-Bold";
+  src: url("../Poppins/Poppins-Bold.eot");
+  src: url("../Poppins/Poppins-Bold.eot?#iefix") format("embedded-opentype"), url("../Poppins/Poppins-Bold.woff") format("woff"), url("../Poppins/Poppins-Bold.ttf") format("truetype"), url("../Poppins/Poppins-Bold.svg#Poppins-Bold") format("svg");
+}
+@font-face {
+  font-family: "Poppins-Medium";
+  src: url("../Poppins/Poppins-Medium.eot");
+  src: url("../Poppins/Poppins-Medium.eot?#iefix") format("embedded-opentype"), url("../Poppins/Poppins-Medium.woff") format("woff"), url("../Poppins/Poppins-Medium.ttf") format("truetype"), url("../Poppins/Poppins-Medium.svg#Poppins-Medium") format("svg");
+}
+/*color*/
+*,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Poppins-Regular", sans-serif;
+}
+
+ul {
+  margin: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+p, h1 {
+  margin: 0;
+}
+
+.header {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+.header .header-content .nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 50px;
+}
+.header .header-content .nav .logo {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 50px;
+  text-align: center;
+}
+.header .header-content .nav .logo .logo-icon,
+.header .header-content .nav .logo .logo-title {
+  color: #ffffff;
+  text-decoration: none;
+}
+.header .header-content .nav .logo .logo-icon i {
+  font-size: 3rem;
+}
+.header .header-content .nav .logo .logo-title {
+  font-size: 2rem;
+}
+.header .header-content .nav .logo:hover .logo-icon,
+.header .header-content .nav .logo:hover .logo-title {
+  color: #5bccf6;
+}
+.header .header-content .menu {
+  width: 100%;
+  height: 100%;
+  text-align: right;
+}
+.header .header-content .menu .menu-link {
+  display: inline-block;
+  padding: 50px 40px;
+}
+.header .header-content .menu .menu-link a {
+  color: #ffffff;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=styles.css.map */

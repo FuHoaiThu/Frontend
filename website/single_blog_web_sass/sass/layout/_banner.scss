@@ -1,0 +1,51 @@
+.banner {
+    @extend %box;
+    background-image: url('./imgs/banner/banner.jpg');
+    background-size: contain;
+    height: 100vh;
+
+    .banner-content {
+        @include pos-ab-top-left(50%, 50%);
+        background-color: $white;
+        padding: 50px;
+        text-align: center;
+        letter-spacing: 2px;
+
+        .banner-content__title {
+            font-family: $font-medium;
+            font-size: 2.5rem;
+            padding-bottom: 5px;
+        }
+
+        .banner-content__des {
+            font-size: 1.2rem;
+            color: $gray;
+            padding-bottom: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 756px) {
+    .banner-content {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .banner {
+        height: 80vh;
+
+        .banner-content {
+            padding: 30px 15px;
+            width: 100%;
+
+            .banner-content__title {
+                font-size: 2rem;
+            }
+
+            .banner-content__des {
+                font-size: 1rem;
+            }
+        }
+    }
+}
