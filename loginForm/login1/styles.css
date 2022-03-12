@@ -1,0 +1,142 @@
+*,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.pb-30 {
+    padding-bottom: 30px;
+}
+.pt-30 {
+    padding-top: 30px;
+}
+p {
+    margin: 0;
+}
+.login {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url("./imgs/244995112_4512789042097765_1134061281380281941_n.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-wrapper {
+    padding: 50px 30px;
+    background-color: #fff;
+    width: 25%;
+}
+
+.login-title {
+    text-align: center;
+}
+
+.login-title h2 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.login-form form input[type="text"] {
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    border: 0;
+    font-size: .9rem;
+    font-weight: 700;
+    background-color: rgba(157, 157, 157, .5);
+}
+
+.login-form form input[type="text"]:focus {
+    border: 2px solid #262626;
+}
+
+.login-form__text {
+    position: relative;
+}
+
+.show-password {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translate(0, -50%);
+}
+
+.show-password__icon {
+    cursor: pointer;
+    font-size: 1rem;
+    color: #9d9d9d;
+}
+
+.login-form__checkbox {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.login-form__checkbox input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    appearance: none;
+    -ms-progress-appearance: none;
+    border: none;
+    background-color: rgba(157, 157, 157, .5);
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.checkbox-icon {
+    display: none;
+}
+
+.login-form__checkbox span {
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.login-form__submit {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 2px solid rgba(157, 157, 157, .5);
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.login-form__submit i {
+    font-size: 1.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #9d9d9d;
+}
+
+.other {
+    text-align: center;
+}
+.other p a {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #9d9d9d;
+    padding-bottom: 10px;
+    text-decoration: none;
+}
+.other p a:hover {
+    color: #262626;
+}

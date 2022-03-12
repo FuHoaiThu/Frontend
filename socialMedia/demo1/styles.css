@@ -1,0 +1,89 @@
+@font-face {
+    font-family: 'Opensan-Bold';
+    src: url('../font/opensan/OpenSans-Bold.ttf') format('truetype');
+    src: url('../font/opensan/OpenSans-Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Opensan-Light';
+    src: url('../font/opensan/OpenSans-Light.ttf') format('truetype');
+    src: url('../font/opensan/OpenSans-Light.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Opensan-Regular';
+    src: url('../font/opensan/OpenSans-Regular.ttf') format('truetype');
+    src: url('../font/opensan/OpenSans-Regular.woff') format('woff')
+}
+
+*,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+.body {
+    font-family: 'Opensan-Regular', sans-serif;
+}
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url("./imgs/banner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.social-media {
+    position: fixed;
+    width: 150px;
+    top:300px;
+    right: -150px;
+    transition: .5s ease-in;
+}
+.toggleSocialMedia {
+    right: 0;
+}
+.social-medi__wrapper {
+    background-color: rgba(173, 173, 173, .6);
+    margin: 0;
+}
+.social-medi__wrapper li {
+    padding: 5px 15px 5px 5px;
+    cursor: pointer;
+    list-style-type: none;
+}
+.social-medi__wrapper li a {
+    font-size: 1rem;
+    display: block;
+    color: #262626;
+    text-decoration: none;
+}
+.social-medi__wrapper li:hover {
+    background-color: #282828;
+}
+.social-medi__wrapper li:hover a {
+    color: #fff;
+}
+.social-medi__wrapper li a i{
+    width: 30px;
+    text-align: center;
+}
+.toggle-btn {
+    width: 30px;
+    background-color: #282828;
+    text-align: center;
+    padding: 5px 0;
+    position: absolute;
+    top: 0;
+    left: -30px;
+    cursor: pointer;
+}
+.toggle-btn i {
+    color: #fff;
+    font-size: 1rem;
+}

@@ -1,0 +1,140 @@
+*, body {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+.body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    margin: 0;
+}
+
+.profit-card {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url("./imgs/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    border-radius: 5px;
+    border-color: #479761;
+}
+
+.card-user {
+    background-color: #479761;
+    padding: 30px 50px;
+    text-align: center;
+}
+
+.card-user__img {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.card-user__img img {
+    border-radius: 50%;
+}
+
+.card-user__name {
+    margin: 0;
+    padding-top: 15px;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.card-user__job {
+    margin: 0;
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+.social-media {
+    padding: 5px 0;
+    color: #fff;
+    cursor: pointer;
+}
+
+.social-media i:hover {
+    color: #f13c20;
+}
+
+.card-user__contact {
+    padding: 10px;
+}
+
+.mbtn {
+    padding: 7.5px 15px;
+    border-radius: 5px;
+    border: 2px solid #262626;
+    background-color: inherit;
+    font-size: 1rem;
+    color: #262626;
+    font-weight: 600;
+}
+
+.mbtn:focus {
+    outline: none;
+}
+
+.mbtn--red {
+    border-color: #f13c20;
+    color: #f13c20;
+}
+
+.mbtn--red:hover {
+    border-color: #fff;
+    color: #fff;
+    background-color: #f13c20;
+    transition: .5s;
+}
+
+.card-info {
+    padding: 30px;
+    text-align: center;
+}
+
+.card-info__num, .card-info__title {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.card-info__title {
+    font-size: .6rem;
+}
+
+.card-info__item:nth-child(2) {
+    position: relative;
+}
+
+.card-info__item:nth-child(2)::before, .card-info__item:nth-child(2)::after {
+    content: "";
+    width: 1px;
+    height: 60%;
+    background-color: #262626;
+    position: absolute;
+}
+
+.card-info__item:nth-child(2)::before {
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+}
+
+.card-info__item:nth-child(2)::after {
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+}

@@ -1,0 +1,67 @@
+*, body {
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 16px;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.spin-text {
+    width: 100%;
+    overflow: hidden;
+    height: 100vh;
+    position: relative;
+    background-color: #fff9b0;
+}
+ul,
+p{
+    margin: 0;
+}
+ul li {
+    list-style-type: none;
+}
+.spin-text__content {
+    text-align: center;
+    width: 800px;
+    border: 5px solid #ffaec0; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.spin-text__content li {
+    display: inline-block;
+    text-align: center;
+    padding: 10px 5px;
+    transition: all 1s ease-in;
+}
+.spin-text__content li p {
+    font-size: 5.5rem;
+    color: #ff7171;
+}
+.spin-text__content:hover li{
+    transform: rotateY(180deg);
+}
+.spin-text__content:hover li:first-child {
+    transition-delay: .1s;
+}
+.spin-text__content:hover li:nth-child(2) {
+    transition-delay: .2s;
+}
+.spin-text__content:hover li:nth-child(3) {
+    transition-delay: .3s;
+}
+.spin-text__content:hover li:nth-child(4) {
+    transition-delay: .4s;
+}
+.spin-text__content:hover li:nth-child(5) {
+    transition-delay: .5s;
+}
+.spin-text__content:hover li:nth-child(6) {
+    transition-delay: .6s;
+}
+.spin-text__content:hover li:nth-child(7) {
+    transition-delay: .7s;
+}

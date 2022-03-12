@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://kit.fontawesome.com/cbbda21ce2.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./styles.css">
+        <title>Login Form</title>
+    </head>
+
+    <body>
+        <div class="login">
+            <div class="login-wrapper">
+                <div class="login-title pb-30">
+                    <h2>Sign In</h2>
+                </div>
+                <div class="login-form">
+                    <form>
+                        <div class="login-form__text pb-30">
+                            <input type="text" name="username" placeholder="User Name">
+                        </div>
+                        <div class="login-form__text">
+                            <input type="text" name="password" placeholder="Password">
+                            <div class="show-password">
+                                <i class="show-password__icon fa-regular fa-eye-slash"></i>
+                            </div>
+                        </div>
+                        <div class="login-form__checkbox pb-30 pt-30">
+                            <input type="checkbox">
+                            <i class="fa-solid fa-check checkbox-icon"></i>
+                            <span>Stay Sign In</span>
+                        </div>
+                    </form>
+                </div>
+                <div class="login-form__submit">
+                    <a href="#">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="other pt-30">
+                    <p>
+                        <a href="#">Can't Sign In</a>
+                    </p>
+                    <p>
+                        <a href="#">Create Account</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!--js-->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script>
+            var field = document.querySelectorAll(".login-form__text");
+            var submit = document.getElementsByClassName(".login-form__submit")
+        </script>
+    </body>
+
+</html>

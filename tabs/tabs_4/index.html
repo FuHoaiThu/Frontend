@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/3f4dc6f991.js"></script>
+    <link rel="stylesheet" href="./styles.css">
+    <title>Tabs</title>
+</head>
+
+<body>
+    <!--tabs-->
+    <div class="tabs">
+        <ul class="tabs-header">
+            <li id="defaultOpen" class="tabs-header__link tabs-active" onclick="openCity(this,'blue')">
+                <a href="#">Tokio</a>
+            </li>
+            <li class="tabs-header__link" onclick="openCity(this,'red')">
+                <a href="#">London</a>
+            </li>
+            <li class="tabs-header__link" onclick="openCity(this,'green')">
+                <a href="#">Paris</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div id="tokio" class="tabs-content__item tabs-show-content bg--blue">
+                <div class="pos-ab--center">
+                    <h3 class="tabs-content__item--title">Tokyo</h3>
+                    <p class="tabs-content__item--desc">Tokyo is the capital of Japan.</p>
+                </div>
+            </div>
+            <div id="london" class="tabs-content__item bg--red">
+                <div class="pos-ab--center">
+                    <h3 class="tabs-content__item--title">London</h3>
+                    <p class="tabs-content__item--desc">London is the capital city of England.</p>
+                </div>
+            </div>
+            <div id="paris" class="tabs-content__item bg--green">
+                <div class="pos-ab--center">
+                    <h3 class="tabs-content__item--title">Paris</h3>
+                    <p class="tabs-content__item--desc">Paris is the capital of France.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--js-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+        $('#defaultOpen').click();
+        function openCity(elemnt, color) {
+            $(elemnt).addClass('tabs-active');
+            $(elemnt).removeClass('bg--none');
+            $(elemnt).siblings().removeClass('tabs-active');
+            $(elemnt).siblings().addClass('bg--none'); let index = $(elemnt).index();
+            $('.tabs-content__item').eq(index).addClass("tabs-show-content");
+            $('.tabs-content__item').eq(index).siblings().removeClass("tabs-show-content");
+            elemnt.style.backgroundColor = color;
+        }
+    </script>
+
+</body>
+
+</html>

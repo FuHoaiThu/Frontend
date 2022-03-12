@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/3f4dc6f991.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles.css">
+    <title>Search Menu</title>
+</head>
+
+<body>
+    <div class="search-menu">
+        <div class="container">
+            <h1>Search Menu</h1>
+            <p>Start to type for a specific category inside the search bar to "filter" the search options.</p>
+            <div class="row pt-3">
+                <div class="col-lg-4">
+                    <div class="search-menu__category">
+                        <h2>Menu</h2>
+                        <input type="text" id="userSearch"placeholder="Search...." title="Type in a category">
+                        <ul class="search-menu__category-wrapper">
+                            <li class="category-wrapper__item"><a href="#">HTML</a></li>
+                            <li class="category-wrapper__item"><a href="#">CSS</a></li>
+                            <li class="category-wrapper__item"><a href="#">JavaScript</a></li>
+                            <li class="category-wrapper__item"><a href="#">PHP</a></li>
+                            <li class="category-wrapper__item"><a href="#">Python</a></li>
+                            <li class="category-wrapper__item"><a href="#">jQuery</a></li>
+                            <li class="category-wrapper__item"><a href="#">SQL</a></li>
+                            <li class="category-wrapper__item"><a href="#">Bootstrap</a></li>
+                            <li class="category-wrapper__item"><a href="#">Node.js</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="search-menu__content">
+                        <h2>Page Content</h2>
+                        <p>Start to type for a specific category inside the search bar to "filter" the search options.
+                        </p>
+                        <p>Some text..Some text..Some text..Some text..Some text..Some text..Some text..Some text..</p>
+                        <p>Some other text..Some text..Some text..Some text..Some text..Some text..Some text..Some
+                            text..</p>
+                        <p>Some text..</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--js-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+        $('#userSearch').keyup(function() {
+            var userSearch = document.getElementById('userSearch');
+            var filter = userSearch.value.toUpperCase();
+            var categoryItem = document.getElementsByClassName("category-wrapper__item");
+            var n = categoryItem.length; // so luong phan tu category item
+            for(let i=0; i<n; i++) {
+                a = categoryItem[i].getElementsByTagName("a")[0];
+                if(a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    categoryItem[i].style.display="";
+                }
+                else {
+                    categoryItem[i].style.display="none";
+                }
+            }
+        })
+    </script>
+
+</body>
+
+</html>
