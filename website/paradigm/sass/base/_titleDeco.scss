@@ -1,0 +1,42 @@
+.title-deco {
+    &::before {
+        content: "";
+        width: 10px;
+        height: 10px;
+        display: block;
+        background-color: $bg-border;
+        border-radius: 50%;
+        position: absolute;
+        top: 50px;
+        right: -50px;
+    }
+
+    &::after {
+        content: "";
+        width: 50px;
+        height: 2px;
+        display: block;
+        position: absolute;
+        top: 54px;
+        right: -98px;
+        background-color: $bg-border;
+    }
+}
+
+.title-deco--start {
+    &::before {
+        top: 25%;
+    }
+
+    &::after {
+        top: calc(25% + 4px);
+    }
+}
+@media only screen and (max-width: 1240px) {
+    .title-deco {
+        &::before,
+        &::after {
+            display: none;
+        }
+    }  
+} 

@@ -1,0 +1,68 @@
+header {
+    @extend .block;
+    .header_title {
+        text-align: right;
+        padding: 100px 150px 50px 100px;
+        position: relative;
+        h1 {
+            position: relative;
+            font-family: $font-bold;
+            font-size: 5rem;
+            font-weight: 900;
+            color: $font-black;
+            position: relative;
+            padding-bottom: 30px;
+        }
+        p {
+            font-family: $font-medium;
+            color: $font-black;
+            letter-spacing: 2px;
+            line-height: 35px;
+            padding-bottom: 30px;
+            a {
+                @include transition(.25s);
+                text-decoration: none;
+                color: $font-black;
+                border-bottom: 1px dotted $font-black;
+                &:hover {
+                    border-bottom: 0px dotted $font-black;
+                }
+            }
+        }
+        .slide-down {
+            cursor: pointer;
+            i {
+                font-size: 4rem;
+                color: $font-black;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 1240px) {
+    header {
+        .header_title {
+            padding: 100px 100px 50px 80px;
+        }
+    }
+}
+@media only screen and (max-width: 992px) {
+    header {
+        .header_title {
+            padding: 100px 0 50px 80px; 
+            text-align: left;
+        }
+        .slide-down {
+            display: none;
+        }
+    }
+}
+@media only screen and (max-width: 430px) {
+    header {
+        .header_title {
+            padding: 50px 15px 30px 15px;
+            h1 {
+                font-size: 4rem;
+            }
+        }
+    }
+} 

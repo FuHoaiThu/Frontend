@@ -1,0 +1,36 @@
+/*transform*/
+@mixin translate($x, $y) {
+    transform: translate($x, $y);
+    -webkit-transform: translate($x, $y);
+    -o-transform: translate($x, $y);
+    -moz-transform: translate($x, $y);
+    -ms-transform: translate($x, $y);
+}
+
+@mixin pos-ab-top-right($top, $right) {
+    @include translate(-$right, -$top);
+    position: absolute;
+    top: $top;
+    right: $right;
+}
+
+@mixin transition($time) {
+    transition: all $time ease-out;
+    -moz-transition: all $time ease-out;
+    -webkit-transition: all $time ease-out;
+    -o-transition: all $time ease-out;
+}
+
+@mixin pos-ab-top-left($top, $left) {
+    @include translate(-$left, -$top);
+    position: absolute;
+    top: $top;
+    left: $left;
+}
+
+@mixin transition($time) {
+    transition: all $time ease-out;
+    -moz-transition: all $time ease-out;
+    -webkit-transition: all $time ease-out;
+    -o-transition: all $time ease-out;
+}

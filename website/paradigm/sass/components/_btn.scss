@@ -1,0 +1,46 @@
+.user-action {
+    .btn-user {
+        @include transition(.3s);
+        padding-top: 15px;
+        padding-bottom: 15px;
+        width: 100%;
+        a {
+            @include transition(.3s);
+            color: $font-black;
+            text-decoration: none;
+            font-size: .9rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        &:focus {
+            border: none;
+        }
+    }
+    .btn-user_blue {
+        background-color: $bg;
+        &:hover {
+            background-color: rgba($color: $bg, $alpha: .6);
+        }
+    }
+    .btn-user_white {
+        background-color: $white;
+        border: 2px solid $border-grey;
+        &:hover {
+            border-color: $bg;
+            a{
+                color: $bg;
+            }
+        }
+    }
+    .btn-submit {
+        padding: 10px 30px;
+        a {
+            font-size: .9rem;
+            text-decoration: none;
+            color: $font-black;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+    }
+}

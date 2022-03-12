@@ -1,0 +1,29 @@
+.contact-info {
+    @extend .block;
+    padding-top: 30px;
+    .media {
+        justify-content: end;
+        .media-item {
+            padding: 15px;
+
+            i {
+                font-size: 1.5rem;
+                color: $font-black;
+            }
+        }
+    }
+    .copyright {
+        padding-top: 50px;
+        p {
+            font-size: .9rem;
+        }
+    }
+}
+@media only screen and (max-width: 992px) {
+    .contact-info {
+        padding-top: 0;
+        .media {
+            justify-content: left !important;
+        }
+    }
+}

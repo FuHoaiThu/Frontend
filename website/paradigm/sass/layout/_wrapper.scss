@@ -1,0 +1,43 @@
+.bg-wrapper {
+    @extend .block;
+    height: 100%;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+     
+        top: 0;
+        left: 0;
+        display: block;
+        width: calc(50vw + 7.5px);
+        height: 100%;
+        background-image: url($url-img + "download.svg");
+        background-repeat: repeat-y;
+        background-color: $bg;
+    }
+    &::after {
+        content: "";
+        width: 2px;
+        position: absolute;
+        top: 154px;
+        right: calc(50% + 65px);
+        display: block;
+        background-color: $bg-border;
+        height: inherit;
+    }
+}
+@media only screen and (max-width: 1240px) {
+    .bg-wrapper {
+        &::after {
+            display: none;
+        }
+    }
+}
+@media only screen and (max-width: 992px) {
+    .bg-wrapper {
+        &::before {
+            display: none;
+        }
+        background-color: $bg;
+    }
+}
