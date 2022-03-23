@@ -1,0 +1,69 @@
+*, body {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 18px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #262626;
+}
+
+h1, p {
+    margin: 0;
+}
+
+.typo {
+    max-width: 35rem;
+    padding: 0 15px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.typo-title {
+    font-family: "Merriweather", serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 0.83rem 0;
+}
+.typo-desc {
+    font-size: 1rem;
+    line-height: 1.5;
+    padding-bottom: 15px;
+    text-align: justify;
+}
+.typo-img__desc {
+    font-size: .8rem;
+    padding: 0.4rem 0 0.83rem 0;
+}
+@media only screen and (min-width: 1024px) {
+    html {
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width: 992px) {
+    html {
+        font-size: 18px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+@media only screen and (max-width: 576px) {
+    html {
+        font-weight: 15px;
+    }
+    .typo {
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 375px) {
+    html {
+        font-weight: 14px;
+    }
+}
+    
