@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://kit.fontawesome.com/3f4dc6f991.js"></script>
+        <link rel="stylesheet" href="./styles.css">
+        <title>Search Menu</title>
+    </head>
+
+    <body>
+        <!--search menu-->
+        <div class="search-menu">
+            <div class="container">
+                <div class="search-menu__wrapper">
+                    <h2 class="search-menu__title">Search Menu</h2>
+                    <p class="search-menu__desc">Start to type for a specific category inside the
+                        search bar to "filter" the search options.</p>
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <div class="left">
+                                <h2 class="search-menu__title">Menu</h2>
+                                <input
+                                    type="text"
+                                    id="search"
+                                    onkeyup="searchMenu()"
+                                    placeholder="Search..."
+                                    title="Type in category">
+                                <ul id="menu">
+                                    <li class="menu-item">
+                                        <a href="#">HTML</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="#">CSS</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="#">JavaScript</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="#">PHP</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="#">Python</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="#">Jquery</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="#">SQL</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="#">Bootstrap</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="#">NodeJS</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-9">
+                            <div class="right">
+                                <h2>Page Content</h2>
+                                <p>Start to type for a specific category inside the search bar to "filter" the
+                                    search options.</p>
+                                <p>Some text..Some text..Some text..Some text..Some text..Some text..Some
+                                    text..Some text..</p>
+                                <p>Some other text..Some text..Some text..Some text..Some text..Some text..Some
+                                    text..Some text..</p>
+                                <p>Some text..</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--js-->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script>
+            function searchMenu() {
+                var input = document.getElementById("search");
+                var filter = input
+                    .value
+                    .toUpperCase();
+                //khoi tao
+                var menu = document.getElementById("menu");
+                var menuItem = menu.getElementsByClassName("menu-item");
+                // n: so luong menu item
+                var n = menuItem.length;
+                for (let i = 0; i < n; i++) {
+                    var a = menuItem[i].getElementsByTagName("a")[0];
+                    if(a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                        menuItem[i].style.display = "";
+                    }
+                    else {
+                        menuItem[i].style.display ="none";
+                    }
+                }
+            }
+        </script>
+
+    </body>
+
+</html>
