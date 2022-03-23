@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <title>Javascript Class</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <p>Mở nguồn trang</p>
+        <script>
+            class person {
+                #fullname; //private
+                #alias; //private
+                constructor(fn, al) {
+                    this.#fullname = fn;
+                    this.#alias = al;
+                }
+                #getAllName() { //private
+                    return(this.#fullname + " " + this.#alias);
+                }
+                getFullName() { // public
+                    return this.#fullname;
+                }
+                sayHello() {
+                    console.log(this.#getAllName());
+                }
+            }
+            // staff ke thua person
+            class staff extends person {
+                #salary; //private
+                constructor(fn, al, sa) {
+                    super(fn, al);
+                    this.#salary = sa;
+                }
+                sayHello() { //public
+                    super.sayHello();
+                    console.log(" with salary " + this.#salary); // overriding
+                }
+                sayGoodbye() { // public
+                    console.log(this.getFullName() + " goodbye everyone!");
+                }
+            }
+            let p1 = new person("Hoài Thu", "Bolero");
+            p1.sayHello();
+            let s1 = new staff("Thu Ngân", "Bolero", "1000$");
+            s1.sayHello();
+            s1.sayGoodbye();
+        </script>
+    </body>
+</html>
