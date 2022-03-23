@@ -9,118 +9,94 @@
             href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <script src="https://kit.fontawesome.com/3f4dc6f991.js"></script>
         <link rel="stylesheet" href="./styles.css">
-        <title>Form</title>
+        <title>Flex</title>
     </head>
 
     <body>
-        <div class="sign-up">
-            <div class="sgu-container">
-                <div class="sign-up_title">
-                    <h1>Đăng kí</h1>
-                </div>
-                <div class="sign-up_form">
-                    <form>
-                        <!--ho ten-->
-                        <div class="fitem">
-                            <label for="fname">Họ Tên</label>
-                            <input
-                                type="text"
-                                name="name"
-                                id="fname"
-                                autofocus="autofocus"
-                                required="required"
-                                tabindex="1"
-                                pattern="[a-z]" title="Chỉ điền chữ thường">
-                            <span></span>
-                            <!--báo lỗi-->
-                        </div>
-                        <!--dia chi-->
-                        <div class="fitem">
-                            <label for="faddress">Địa chỉ</label>
-                            <input type="text" name="address" id="faddress" tabindex="2">
-                            <span></span>
-                            <!--báo lỗi-->
-                        </div>
-                        <!--gioi tinh-->
-                        <div class="fitem">
-                            <label form="fgender">Giới tính</label>
-                            <input type="radio" id="nam" name="gender" value="Nam" tabindex="3">
-                            <label form="nam" class="radio-label">Nam</label>
-                            <input type="radio" id="nu" name="gender" value="Nữ" tabindex="4">
-                            <label form="nu" class="radio-label">Nữ</label>
-                        </div>
-                        <!--ngay sinh-->
-                        <div class="fitem">
-                            <label for="fbirthday">Ngày sinh</label>
-                            <input
-                                type="text"
-                                name="birthday"
-                                id="fbirthday"
-                                required="required"
-                                tabindex="5">
-                            <span></span>
-                            <!--báo lỗi-->
-                        </div>
-                        <!--email-->
-                        <div class="fitem">
-                            <label for="femail">Email</label>
-                            <input type="text" name="email" id="femail" required="required" tabindex="6">
-                            <span></span>
-                            <!--báo lỗi-->
-                        </div>
-                        <!--dien thoai-->
-                        <div class="fitem">
-                            <label for="fphone">Điện thoại</label>
-                            <input type="text" name="phone" id="fphone" tabindex="7">
-                            <span></span>
-                            <!--báo lỗi-->
-                        </div>
-                        <!--khoa dang ky-->
-                        <div class="fitem">
-                            <label form="fsubject">Khóa đăng ký</label>
-                            <input type="radio" id="ta" name="ta" value="ta" tabindex="8">
-                            <label form="ta" class="radio-label">Tiếng Anh</label>
-                            <input type="radio" id="qtr" name="qtr" value="qtr" tabindex="9">
-                            <label form="qtr" class="radio-label">Quản Trị</label>
-                            <input type="radio" id="cntt" name="cntt" value="cntt" tabindex="10">
-                            <label form="cntt" class="radio-label">CNTT</label>
-                        </div>
-                        <!--ten su dung-->
-                        <div class="fitem">
-                            <label for="fuser">Tên sử dụng</label>
-                            <input type="text" name="user" id="fuser" required="required" tabindex="11">
-                            <span></span>
-                            <!--báo lỗi-->
-                        </div>
-                        <!--mat khau-->
-                        <div class="fitem">
-                            <label for="fpassword">Mật khẩu</label>
-                            <input
-                                type="text"
-                                name="password"
-                                id="fpassword"
-                                required="required"
-                                tabindex="12">
-                            <span></span>
-                            <!--báo lỗi-->
-                        </div>
-                        <!--nhap lai mat khau-->
-                        <div class="fitem">
-                            <label for="fpassagain">Điện thoại</label>
-                            <input
-                                type="text"
-                                name="password"
-                                id="fpassagain"
-                                required="required"
-                                tabindex="13">
-                            <span></span>
-                            <!--báo lỗi-->
-                        </div>
-                        <!--ghi chú-->
-                        <!--chap nhan va bo qua-->
-                    </form>
+        <div class="flex">
+            <div class="row">
+                <div class="col-lg-12">
+                    <header class="flex-item">
+                        <p>This is my lovely blog</p>
+                    </header>
                 </div>
             </div>
+            <div class="content">
+                <div class="row">
+                    <div class="col-lg-10">
+                        <div class="row">
+                            <!--content 1-->
+                            <div class="col-lg-x3">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="flex-item main">
+                                            <h2>Main</h2>
+                                            <p>Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor
+                                                imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at
+                                                porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas
+                                                ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae
+                                                convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean
+                                                finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus.
+                                                Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget
+                                                fermentum sapien.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="flex-item third">
+                                            <p>Third</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="flex-item forth">
+                                            <p>Forth</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="flex-item fifth">
+                                            <p>Fifth</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-x2">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="flex-item second">
+                                            <h3>Second</h3>
+                                            <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+                                                ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="flex-item sixth">
+                                            <p>Sixth</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="flex-item seventh">
+                                            <p>Seventh</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="flex-item eightth">
+                            <p>Eighth</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="flex-item">
+                            <p>Contact me@mysite.com</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         </div>
         <!--js-->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
@@ -128,27 +104,6 @@
             src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
         <script
             src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-        <script>
-            $(document).on('keypress', 'input', function (e) {
-                if (e.which === 13) {
-                    e.preventDefault();
-                    let count = this.tabIndex + 1 // tang con tro den input tiep
-                    var $next = $('[tabIndex=' + count + ']'); // chuyen den input tiep theo
-                    $next.focus(); // luu vi tri moi
-                    //console.log($next.length);
-                    if ($next.length === 0) { // kiem tra da den phan tu cuoi chua
-                        $next = $('[tabIndex=1]'); // quay ve phan tu dau
-                        $next
-                            .focus()
-                            .click();
-                    }
-
-                }
-            })
-            // dinh dang lai ten
-            var name = document.getElementById("fname");
-            console.log(name.value);
-        </script>
     </body>
 
 </html>
