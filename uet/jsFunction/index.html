@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <title>Function javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <p>Mở nguồn trang</p>
+        <script>
+            function person(fn, al) {
+                var fullname = fn; // private
+                var alias = al;
+                function getAllName() { //private
+                    return (fullname + " " + alias);
+                }
+                this.getFullName = function () {
+                    return fullname;
+                };
+                this.sayHello = function () {
+                    console.log(getAllName.apply(this));
+                };
+            }
+            function staff(fn, al, sa) {
+                person.call(this, fn, al); // ke thua
+                var salary = sa;
+                var parentHello = this.sayHello;
+                this.sayHello = function () {
+                    parentHello.apply(this);
+                    console.log(" with salary " + salary);
+                };
+                this.sayGoodbye = function () {
+                    console.log(this.getFullName() + " goodbye everyone!");
+                }
+            }
+            let p1 = new person("Hoài Thu", "Bolero");
+            p1.sayHello();
+            let s1 = new staff("Thu Ngân", "Bolero", "1000$");
+            s1.sayHello();
+            s1.sayGoodbye();
+        </script>
+    </body>
+</html>
