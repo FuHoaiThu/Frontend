@@ -16,6 +16,24 @@ h6, p {
     margin: 0;
 }
 
+/*button xoa */
+.user-button {
+    border: 1px solid #3498db;
+    background-color: #3498db;
+    margin-bottom: 15px;
+    visibility: hidden
+}
+
+.user-button:hover {
+    background-color: #fff;
+}
+
+.user-button a {
+    color: #262626;
+    text-decoration: none;
+}
+
+/*table*/
 .user {
     width: 100%;
     overflow: hidden;
@@ -29,25 +47,32 @@ h6, p {
     border: 1px solid #262626;
     border-collapse: collapse;
 }
+
 #tbl tr {
     cursor: pointer;
 }
+
 #tbl th,
 #tbl td {
     border: 1px solid #262626;
 }
+
 #tbl tr:nth-child(2n) {
     background-color: #bdc3c7;
 }
+
 #tbl tr:nth-child(2n+1) {
     background-color: #95a5a6;
 }
+
 #tbl thead tr:first-child {
     background-color: #fc05a9;
 }
+
 #tbl tr:hover {
     background-color: #2ecc71;
 }
+
 .user-chk {
     padding: 5px;
 }
@@ -58,7 +83,8 @@ h6, p {
     outline: none;
     border: 1px solid #262626;
 }
-.user-chk input[type="checkbox"]:checked #tbl tr{
+
+.user-chk input[type="checkbox"]:checked #tbl tr {
     background-color: red;
 }
 
@@ -67,9 +93,11 @@ h6, p {
 .user-gen {
     padding: 0 15px;
 }
+
 .text--center {
     text-align: center;
 }
+
 .user-wrapper #tbl .bg--yellow {
     background-color: #f1c40f;
 }
