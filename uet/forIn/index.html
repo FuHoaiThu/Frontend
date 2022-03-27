@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <title>Javascript For In</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <p>Mở nguồn trang</p>
+        <script>
+            // lay key cua object
+            var myInfo = {
+                name: "Hoai Thu",
+                age: "24",
+                address: "Ha Noi, Vn"
+            };
+            for(var key in myInfo) {
+                //code
+                console.log(key);
+                console.log(myInfo[key]); // lay value cua key
+            }
+            //xu li voi mang
+            var language = [
+                'js', 'c++', 'java'
+            ]
+            for(var key in language) {
+                console.log(key);
+                console.log(language[key]);
+            }
+            //string
+            var string = "myString";
+            for(var key in string) {
+                console.log(key);
+            }
+        </script>
+    </body>
+</html>
