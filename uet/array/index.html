@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <title>Javascript For Of</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <p>Mở nguồn trang</p>
+        <script>
+            var courses = [
+                {
+                    id: 1,
+                    name: 'Javascript',
+                    coin: 250
+                },
+                {
+                    id: 2,
+                    name: 'HTML, CSS',
+                    coin: 0
+                },
+                {
+                    id: 3,
+                    name: 'Ruby',
+                    coin: 0
+                },
+                {
+                    id: 4,
+                    name: 'NodeJS',
+                    coin: 400
+                }
+            ];
+            // truyen mot ham qua tham so duoc goi la call back
+            courses.forEach(function(course, index) {
+                console.log(index, course);
+            })
+            //kiem tre tat ca cac phan tu cua mang thoa man mot dieu kien nao do
+            // tra ve kieu boolen
+            var isFree = courses.every(function(course, index) {
+                return course.coin === 0;
+            })
+            console.log(isFree);
+            // some kiem tra cac phan tu chi can 1 phan tu thoa man thi dung
+            var isFree = courses.some(function(course, index) {
+                return course.coin === 0;
+            })
+            console.log(isFree);
+            // fine tim kiem tra va chinh phan tu dung
+            // chi tra ve mot doi tuong
+
+            var isFree = courses.find(function(course, index) {
+                return course.name === 'Ruby';
+            })
+            console.log(isFree);
+            //filter giong file nhung tra ve tat ca cac phan tu tim duoc thoa ma
+            var isFree = courses.filter(function(course, index) {
+                return course.coin === 0;
+            })
+            console.log(isFree);
+            // map de thay doi element cua mot array
+            //originArray laf array cu
+            var newCoures = courses.map(function(course, index, originArray) {
+                //console.log(course);
+                return {
+                    id: course.id,
+                    name: `Khoa hoc: ${course.name}`,
+                    coin: course.coin,
+                    coinText: `Gia: ${course.coin}`
+                }
+            });
+            console.log(newCoures);
+            // reduce nhan va gia tri duy nhat
+            // reduce gom 2 tham so function va gia tri khoi tao
+            // accumulator la gia tri khoi tao duoc gan vao o luot chay dau
+            var totalCoin = courses.reduce(function(accumulator, currentValue, currentIndex, originArray){
+                return accumulator += currentValue.coin;
+            }, 0);
+            console.log(totalCoin);
+        </script>
+    </body>
+</html>
