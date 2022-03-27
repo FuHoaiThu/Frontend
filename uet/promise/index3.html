@@ -1,0 +1,83 @@
+<!DOCTYPE html> 
+<html lang="en-us">
+    <head>
+        <title>Promise</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <ul class="demo"></ul>
+        <script>
+            var users = [
+                {
+                    id: 1,
+                    name: 'Hoai Thu'
+                },
+                {
+                    id: 2,
+                    name: "Thu Ngan"
+                },
+                {
+                    id: 3,
+                    name: 'Anh Tu'
+                }
+            ];
+            var comments = [
+                {
+                    id: 1,
+                    user_id: 1,
+                    content: 'Ra video di'
+                },
+                {
+                    id: 2,
+                    user_id: 2,
+                    content: 'Vua ra xong'
+                }
+            ];
+            // 1. Lay comments
+            // 2. Tu comment lay user id
+            // 3. Tu user id lay ra user tuong ung
+            function getComments() {
+                return new Promise((resolve) => {
+                   setTimeout(() => {
+                       resolve(comments);
+                   }, 1000); 
+                });
+            }
+            function getUsersById(commentUserId) {
+                return new Promise((resolve) => {
+                    var result = users.filter((user) => {
+                        return commentUserId.includes(user.id);
+                    })
+                    resolve(result);
+                    //console.log(result);
+                })
+            }
+            getComments()
+                .then(function(comments) {
+                    //console.log(comments);
+                    var commentUserId = comments.map(function(comment) {
+                        return comment.user_id;
+                    })
+                    //console.log(commentUserId);
+                    return getUsersById(commentUserId)
+                        .then(function(users) {
+                            return {
+                                users: users,
+                                comments: comments
+                            }
+                        })
+                })
+                .then(function(data) {
+                    var demo = document.querySelector('.demo');
+                    var html ='';
+                    data.comments.forEach((comment) => {
+                        var user = data.users.find((user) => {
+                            return user.id === comment.user_id;
+                        });
+                        html += `<li>${user.name}: ${comment.content} </li>`
+                    });
+                    demo.innerHTML = html;
+                })
+        </script>
+    </body>
+</html>

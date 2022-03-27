@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Test</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            // callback hell
+            setTimeout(() => {
+                console.log(1);
+                setTimeout(() => {
+                    console.log(2);
+                    setTimeout(() => {
+                        console.log(3);
+                    }, 1000)
+                }, 1000)
+            }, 1000);
+            // promise
+            //memory leak: ro ri bo nho
+            //1. Pending : trang thai cho khi khong resolve hay reject
+            //2. Fulfilled: thanh cong
+            // 3. Reject: that bai
+            var promise = new Promise(
+                //excutor
+                function(resolve, reject) {
+                    // logic
+                    // thanh cong: resolve()
+                    // that bai: reject()
+                    resolve({
+                        id: 1,
+                        name: "Javascript"
+                    });
+                    //reject();
+                }
+            );
+            promise
+            // cal resolve thi then duoc goi
+                .then(function( course) {
+                    //console.log("Successfully");
+                    //console.log(course);
+                    return 1;
+                    // neu khong return thi se bij bo qua
+                    // neu return promis thi va tuan tu
+                })
+                .then(function(data) {
+                    //console.log("Successfully");
+                    //console.log(course);
+                    console.log(data);
+                    return 2;
+                })
+                .then(function(data) {
+                    //console.log("Successfully");
+                    //console.log(course);
+                    console.log(data);
+                })
+            // call reject thi catch duoc goi
+                .catch(function() {
+                    console.log("Failure");
+                })
+            // call resolve or reject thi finally duoc goi
+                .finally(function() {
+                    console.log("Done");
+                })
+            //chain : chuoi
+            function sleep(ms) {
+                return new Promise((resolve) => {
+                    setTimeout(resolve, ms);
+                });
+            }
+            sleep(100)
+                .then(function() {
+                    console.log(1);
+                    return sleep(1000);
+                })
+                .then(function() {
+                    console.log(2);
+                    sleep(1000);
+                })
+        </script>
+    </body>
+</html>
