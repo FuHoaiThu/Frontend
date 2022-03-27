@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Test</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            function isNumber(value) {
+                if (isNaN(value)) {
+                    return false;
+                } else if (typeof value == 'number') {
+                    return true;
+                } else 
+                    return false;
+                }
+            // Kì vọng đạt được
+            console.log(isNumber(999)); // true
+            console.log(isNumber('abc')); // false
+            console.log(isNumber('100')); // false
+            console.log(isNumber(NaN)); // false
+            console.log(isNumber(100 / 'abc')); // false
+        </script>
+    </body>
+</html>
