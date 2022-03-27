@@ -1,0 +1,75 @@
+*, body {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #262626;
+}
+
+h6, p {
+    margin: 0;
+}
+
+.user {
+    width: 100%;
+    overflow: hidden;
+}
+
+.user-wrapper {
+    padding: 50px 15px;
+}
+
+#tbl {
+    border: 1px solid #262626;
+    border-collapse: collapse;
+}
+#tbl tr {
+    cursor: pointer;
+}
+#tbl th,
+#tbl td {
+    border: 1px solid #262626;
+}
+#tbl tr:nth-child(2n) {
+    background-color: #bdc3c7;
+}
+#tbl tr:nth-child(2n+1) {
+    background-color: #95a5a6;
+}
+#tbl thead tr:first-child {
+    background-color: #fc05a9;
+}
+#tbl tr:hover {
+    background-color: #2ecc71;
+}
+.user-chk {
+    padding: 5px;
+}
+
+.user-chk input[type="checkboxx"] {
+    width: 15px;
+    height: 15px;
+    outline: none;
+    border: 1px solid #262626;
+}
+.user-chk input[type="checkbox"]:checked #tbl tr{
+    background-color: red;
+}
+
+.user-name,
+.user-bth,
+.user-gen {
+    padding: 0 15px;
+}
+.text--center {
+    text-align: center;
+}
+.user-wrapper #tbl .bg--yellow {
+    background-color: #f1c40f;
+}
