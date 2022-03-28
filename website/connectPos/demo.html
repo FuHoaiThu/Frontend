@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("li").toggleClass(function(){
+      return $(this).addClass('action');
+    });
+  });
+});
+</script>
+<style>
+.listitem_1, .listitem_3 {
+  color: red;
+}
+
+.listitem_0, .listitem_2 {
+  color: blue;
+}
+.action {
+    color:red;
+}
+</style>
+</head>
+<body>
+
+<h1>This is a heading</h1>
+
+<ul>
+  <li>Peter</li>
+  <li>Lois</li>
+  <li>Chris</li>
+  <li>Stewie</li>
+</ul>
+
+<button>Add/remove classes to list items</button>
+
+</body>
+</html>
